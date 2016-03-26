@@ -1,4 +1,5 @@
 <?php
+// credit to http://subinsb.com/how-to-create-a-simple-web-crawler-in-php for web crawler
 $query = strtolower($artist . " " . $song);
 $zip_link = "";
 include("simple_html_dom.php");

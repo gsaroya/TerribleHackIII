@@ -1,11 +1,16 @@
 #!/bin/bash
 
-myzip = $1
-#mp3 = $2
-#location = $3
+$wav = $1
+$myzip = ""
+if [$# -ne 1];
+    then $myzip = $2
+fi
 
-curl -sS myzip > myzip.zip
-
+# Extract midi file
+$midi = zipinfo -1 myzip.zip
+curl -sS $myzip > myzip.zip
 unzip myzip.zip
+rm myzip.zip
 
-timidity -Ow -o - *.midi | lame - output.mp3
+# Convert midi to mp3
+timidity -Ow -o - $midi | lame - $wav.mp3
