@@ -21,8 +21,16 @@ if [ "$#" -ne 2 ]; then
   # Convert wav to mp3
   y | lame $wav ${name}wav.mp3
 
-  # Merge together
-  y | ffmpeg -i ${name}low.mp3 -i ${name}wav.mp3 -filter_complex amerge -ac 2 -c:a libmp3lame -q:a 4 ${name}.mp3
+  len1=`mp3info -p "%S" ${name}wav.mp3`
+  len2=`mp3info -p "%S" ${name}low.mp3`
+  if [[ $len1 < $len2 ]]; then
+    # Merge together
+    y | ffmpeg -i ${name}wav.mp3 -i ${name}low.mp3 -filter_complex amerge -ac 2 -c:a libmp3lame -q:a 4 ${name}.mp3
+  else
+    # Merge together
+    y | ffmpeg -i ${name}low.mp3 -i ${name}wav.mp3 -filter_complex amerge -ac 2 -c:a libmp3lame -q:a 4 ${name}.mp3
+  fi
+
 else
   wav=$1
   name=$2
