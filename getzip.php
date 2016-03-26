@@ -69,8 +69,8 @@ function crawl_site($u, $depth, $query){
         crawl_site($url, $depth, $query);
       }
     } elseif ($depth == 2 && (strpos("a" . $url, "http://www.midikaraokes.com/") == 1) && (strpos("a" . $url, ".zip") !=false)) {
+	global $zip_link;	
       $zip_link =  $url;
-      echo $url . $zip_link;
     }
    }
   }
@@ -78,4 +78,5 @@ function crawl_site($u, $depth, $query){
 }
 $search = str_replace(" ", "+", $query);
 crawl_site("http://www.midikaraokes.com/?s=" . $search, 1, $query);
+//echo "a" . $zip_link;
 ?>
