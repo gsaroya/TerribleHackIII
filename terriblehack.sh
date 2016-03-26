@@ -8,7 +8,7 @@ if [ "$#" -ne 2 ]; then
   echo $myzip
 
   # Extract midi file
-  y | wget $myzip -O myzip.zip
+  y | wget "$myzip" -O myzip.zip
   midi=`zipinfo -1 myzip.zip`
   echo $midi
   y | unzip myzip.zip
