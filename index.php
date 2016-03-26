@@ -13,7 +13,6 @@
     <style>
     .error {color: #FF0000;}
     </style>
-    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
     <?php include("readform.php"); ?>
   </head>
   <body>
@@ -35,7 +34,6 @@
     echo "<br>";
     echo $song;
     ?>
-<input onclick='responsiveVoice.speak("Hello World");' type='button' value='Play' />
 
 
 
