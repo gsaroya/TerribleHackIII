@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $artist = test_input($_POST["artist"]);
      // check if name only contains letters and whitespace
      if (!preg_match("/^[a-zA-Z ]*$/",$artist)) {
-       $artistErr = "Only letters and white space allowed";
+       //$artistErr = "Only letters and white space allowed";
      }
    }
    if (empty($_POST["song"])) {
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $song = test_input($_POST["song"]);
      // check if name only contains letters and whitespace
      if (!preg_match("/^[a-zA-Z ]*$/",$song)) {
-       $songErr = "Only letters and white space allowed";
+       //$songErr = "Only letters and white space allowed";
      }
    }
 
