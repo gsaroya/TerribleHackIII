@@ -31,7 +31,11 @@
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       echo "<h2>Your Output:</h2>";
-      echo "<br/><a href='$zip_link'>zip file</a>";
+      if (strpos("a" . $zip_link, "http://www.midikaraokes.com/") == 1) {
+        echo "<br/><a href='$zip_link'>zip file</a>";
+      } else {
+        echo "<br/>Song instrumental not found";
+      }
       echo "<br/><a href='http://159.203.22.56/th/TerribleHackIII/" . $the_name . ".wav'>wav file</a>";
     }
     ?>
