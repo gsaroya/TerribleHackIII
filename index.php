@@ -29,9 +29,11 @@
     </form>
 
     <?php
-    echo "<h2>Your Output:</h2>";
-    echo "<br/><a href='$zip_link'>zip file</a>";
-    echo "<br/><a href='http://159.203.22.56/th/TerribleHackIII/" . $the_name . ".wav'>wav file</a>";
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      echo "<h2>Your Output:</h2>";
+      echo "<br/><a href='$zip_link'>zip file</a>";
+      echo "<br/><a href='http://159.203.22.56/th/TerribleHackIII/" . $the_name . ".wav'>wav file</a>";
+    }
     ?>
 
 
