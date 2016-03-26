@@ -48,7 +48,6 @@
         $cmd2 = "./terriblehack.sh ${the_name}.wav $final_name";
 
       }
-      echo $cmd2;
       echo "<br/><a href='http://159.203.22.56/th/TerribleHackIII/" . $final_name . "wav.mp3'>lyrics file</a>";
       $output = shell_exec($cmd2);
       echo "<br/><a href='http://159.203.22.56/th/TerribleHackIII/" . $final_name . ".mp3'>final song file</a>";
