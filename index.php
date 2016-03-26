@@ -36,7 +36,7 @@
       $final_name = stripslashes($final_name);
       $final_name = htmlspecialchars($final_name);
       $final_name = $final_name = str_replace(" ", "_", $final_name);
-      $final_name = $final_name = str_replace("''", "_", $final_name);
+      $final_name = $final_name = str_replace("'", "_", $final_name);
       echo "<h2>Your Output:</h2>";
       $cmd2 = "";
       if (strpos("a" . $zip_link, "http://www.midikaraokes.com/") == 1) {
