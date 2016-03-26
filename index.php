@@ -36,8 +36,5 @@
       echo "<br/><a href='http://159.203.22.56/th/TerribleHackIII/" . $the_name . ".wav'>wav file</a>";
     }
     ?>
-
-
-
   </body>
 </html>

@@ -13,5 +13,4 @@ $lyrics = preg_replace( "/\r|\n/", ". ", $lyrics );
 $cmd1 = 'echo "' . $lyrics . '" > ' . $the_name . '.txt';
 $output = shell_exec($cmd1);
 $output = shell_exec('cat -A ' . $the_name . '.txt | text2wave -o ' . $the_name . '.wav');
-echo "<br/><a href='http://159.203.22.56/th/TerribleHackIII/" . $the_name . ".wav'>wav file</a>";
 ?>
