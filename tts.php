@@ -3,6 +3,7 @@
 //$song = "Never Gonna Give You Up";
 $lyrics_url = strtolower($artist . "&song=" . $song);
 $the_name = $search = str_replace(" ", "_", $song);
+$the_name = $search = str_replace("'", "_", $song);
 $lyrics_url = "http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect?artist=" . $lyrics_url;
 $xml = simplexml_load_file($lyrics_url);
 $lyrics = $xml->Lyric;
