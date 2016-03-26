@@ -70,6 +70,7 @@ function crawl_site($u, $depth, $query){
       }
     } elseif ($depth == 2 && (strpos("a" . $url, "http://www.midikaraokes.com/") == 1) && (strpos("a" . $url, ".zip") !=false)) {
       $zip_link =  $url;
+      echo $url . $zip_link;
     }
    }
   }
