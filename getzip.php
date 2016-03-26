@@ -1,9 +1,6 @@
 <?php
 $query = strtolower($artist . " " . $song);
 
-$output = shell_exec('ls -lart');
-echo $output;
-
 include("simple_html_dom.php");
 $crawled_urls=array();
 $found_urls=array();
