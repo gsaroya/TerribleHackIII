@@ -41,11 +41,11 @@
       $cmd2 = "";
       if (strpos("a" . $zip_link, "http://www.midikaraokes.com/") == 1) {
         //echo "<br/><a href='$zip_link'>zip file</a>";
-        $cmd2 = './terriblehack.sh ${the_name}.wav "' . $zip_link . '" $final_name';
+        $cmd2 = './terriblehack.sh ' . ${the_name} . '.wav "' . $zip_link . '" ' . "$final_name";
         echo "<br/><a href='http://159.203.22.56/th/TerribleHackIII/" . $final_name . "midi.mp3'>instrumental file</a>";
       } else {
         echo "<br/>Song instrumental not found";
-        $cmd2 = './terriblehack.sh ${the_name}.wav "' . $final_name;
+        $cmd2 = "./terriblehack.sh ${the_name}.wav $final_name";
 
       }
       echo $cmd2;
