@@ -35,7 +35,7 @@
       $final_name = trim($final_name);
       $final_name = stripslashes($final_name);
       $final_name = htmlspecialchars($final_name);
-      $the_name = $search = str_replace(" ", "_", $song);
+      $final_name = $final_name = str_replace(" ", "_", $final_name);
       echo "<h2>Your Output:</h2>";
       if (strpos("a" . $zip_link, "http://www.midikaraokes.com/") == 1) {
         //echo "<br/><a href='$zip_link'>zip file</a>";
