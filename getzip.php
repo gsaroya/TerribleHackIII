@@ -1,6 +1,6 @@
 <?php
 $query = strtolower($artist . " " . $song);
-
+$zip_link = "";
 include("simple_html_dom.php");
 $crawled_urls=array();
 $found_urls=array();
@@ -69,7 +69,7 @@ function crawl_site($u, $depth, $query){
         crawl_site($url, $depth, $query);
       }
     } elseif ($depth == 2 && (strpos("a" . $url, "http://www.midikaraokes.com/") == 1) && (strpos("a" . $url, ".zip") !=false)) {
-      echo $url;
+      $zip_link =  $url;
     }
    }
   }

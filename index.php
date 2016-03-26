@@ -16,7 +16,7 @@
     <?php include("readform.php"); ?>
   </head>
   <body>
-    <h2>PHP Form Validation Example</h2>
+    <h2>Song Generator</h2>
     <p><span class="error">* required field.</span></p>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
        Artist: <input type="text" name="artist" value="<?php echo $artist;?>">
@@ -29,10 +29,9 @@
     </form>
 
     <?php
-    echo "<h2>Your Input:</h2>";
-    echo $artist;
-    echo "<br>";
-    echo $song;
+    echo "<h2>Your Output:</h2>";
+    echo "<br/><a href='$zip_link'>zip file</a>";
+    echo "<br/><a href='http://159.203.22.56/th/TerribleHackIII/" . $the_name . ".wav'>wav file</a>";
     ?>
 
 
