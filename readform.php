@@ -1,7 +1,7 @@
 <?php
 // define variables and set to empty values
 $artistErr = $songErr = "";
-$song = $artist = "";
+$song = $artist = $zip_link = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
    if (empty($_POST["artist"])) {
